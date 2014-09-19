@@ -48,6 +48,7 @@ img, iframe, video {
 
 .retro_static {
 	opacity: .07;
+	width: 100%;
 	background: transparent url('http://ze3image.b0.upaiyun.com/thrideo/video_static_animated.gif') 0 0 repeat;
 	position: absolute;
 	z-index: 5;
@@ -576,6 +577,9 @@ b,
   }
 
 	.img-photo {
+		width: -webkit-calc(100% + 24px);
+		width: -moz-calc(100% + 24px);
+		width: -o-calc(100% + 24px);
 		width: calc(100% + 24px);
 		position: relative;
 		left: -12px;
