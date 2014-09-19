@@ -532,10 +532,23 @@ b,
   .video,
 	.video-post a,
 	.tumblr_video_container,
-	.tumblr_video_iframe { height: 300px!important; }
+	.tumblr_video_iframe { height: 338px!important; }
 
 	.img-div {
 		min-height: 90px;
+	}
+
+	.img-photo {
+		width: -webkit-calc(100% + 24px);
+		width: -moz-calc(100% + 24px);
+		width: -o-calc(100% + 24px);
+		width: calc(100% + 24px);
+		position: relative;
+		left: -12px;
+	}
+
+	.retro_static {
+		left: 0!important;
 	}
 
   .wrap { padding: 0 12px; }
@@ -571,19 +584,6 @@ b,
     border-radius: 5px;
     border: 1px solid #e8e8e8;
   }
-
-	.img-photo {
-		width: -webkit-calc(100% + 24px);
-		width: -moz-calc(100% + 24px);
-		width: -o-calc(100% + 24px);
-		width: calc(100% + 24px);
-		position: relative;
-		left: -12px;
-	}
-
-	.retro_static {
-		left: 0!important;
-	}
 
 	.img-div {
 		min-height: auto!important;
@@ -622,7 +622,7 @@ b,
   .video,
 	.video-post a,
 	.tumblr_video_container,
-	.tumblr_video_iframe { height: 200px!important; }
+	.tumblr_video_iframe { height: 253px!important; }
 
 	.img-div {
 		min-height: 65px;
@@ -633,5 +633,5 @@ b,
 	.video,
 	.video-post a,
 	.tumblr_video_container,
-	.tumblr_video_iframe { height: 166.5px!important; }
+	.tumblr_video_iframe { height: 180px!important; }
 }
