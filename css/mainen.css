@@ -136,8 +136,6 @@ div.swiftype div.st-result-listing div.st-result div.st-result-text h3 {
 	font-size: 20px!important;
 }
 
-st-snippet
-
 /* Site footer */
 
 .site-footer {
@@ -252,7 +250,7 @@ iframe[src^="http://sports.yahoo"],
 .html_photoset iframe,
 .tumblr_video_container,
 .video-post a {
-    width: 100%!important;
+	width: 100%!important;
 	width: -webkit-calc(100%)!important;
 	width: -moz-calc(100%)!important;
 	width: -o-calc(100%)!important;
@@ -303,6 +301,7 @@ iframe[src^="http://sports.yahoo"],
 .page-content {
   padding: 30px 0;
   background-color: #fff;
+	overflow: hidden;
 }
 
 .video,
@@ -525,18 +524,18 @@ b,
 @media screen and (max-width: 750px) {
 
 	.video,
-.video-post a,
-.tumblr_video_container,
-.tumblr_video_iframe { height: 365px!important; }
+	.video-post a,
+	.tumblr_video_container,
+	.tumblr_video_iframe { height: 365px!important; }
 
 }
 
 @media screen and (max-width: 600px) {
 
   .video,
-.video-post a,
-.tumblr_video_container,
-.tumblr_video_iframe { height: 300px!important; }
+	.video-post a,
+	.tumblr_video_container,
+	.tumblr_video_iframe { height: 300px!important; }
 
 	.img-div {
 		min-height: 90px;
@@ -576,6 +575,12 @@ b,
     border: 1px solid #e8e8e8;
   }
 
+	.img-photo {
+		width: calc(100% + 24px);
+		position: relative;
+		left: -12px;
+	}
+
 	.img-div {
 		min-height: auto!important;
 	}
@@ -611,9 +616,9 @@ b,
 }
 @media screen and (max-width: 450px) {
   .video,
-.video-post a,
-.tumblr_video_container,
-.tumblr_video_iframe { height: 200px!important; }
+	.video-post a,
+	.tumblr_video_container,
+	.tumblr_video_iframe { height: 200px!important; }
 
 	.img-div {
 		min-height: 65px;
@@ -622,7 +627,7 @@ b,
 }
 @media screen and (max-width: 320px) {
 	.video,
-.video-post a,
-.tumblr_video_container,
-.tumblr_video_iframe { height: 166.5px!important; }
+	.video-post a,
+	.tumblr_video_container,
+	.tumblr_video_iframe { height: 166.5px!important; }
 }
