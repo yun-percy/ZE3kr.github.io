@@ -1,0 +1,70 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}{% if page.title %}{% if page.nositename %}{% else %} | {% endif %}{% endif %}{% if page.file %}Thrideo{% else %}{% if page.full-image %}ZE3kr’s Photo{% else %}{% if page.nositename %}{% else %}{{ site.title }}{% endif %}{% endif %}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    {% if page.subtitle %}<meta name="description" content="{{ page.subtitle }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
+	{% include dns-prefetch.html %}
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.github.url }}">
+    <link rel="shortcut icon" href="/favicon.ico">
+		{% if page.image %}
+		<link rel="apple-touch-icon-precomposed" href="{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','_q.' }}">
+		{% else %}
+		{% if page.vimeo-image %}
+		<link rel="apple-touch-icon-precomposed" href="https://i.vimeocdn.com/video/{{ page.vimeo-image }}_150x150.jpg">
+		{% else %}
+		{% if page.isindex %}<link rel="apple-touch-icon-precomposed" href="{{ site.small-avatarurl }}"><meta property="og:image" content="https://i.vimeocdn.com/video/{{ site.vimeo.image }}_1024.jpg" />{% else %}
+		{% if page.isvideo %}{% for post in site.categories.video limit:1 %}<link rel="apple-touch-icon-precomposed" href="https://i.vimeocdn.com/video/{{ post.vimeo-image }}_150x150.jpg"><meta property="og:image" content="https://i.vimeocdn.com/video/{{ post.vimeo-image }}_1024.jpg" />{% endfor %}{% else %}
+		{% if page.isphoto %}{% for post in site.categories.photo limit:1 %}<link rel="apple-touch-icon-precomposed" href="{{ post.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','_q.' }}"><meta property="og:image" content="{{ post.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' }}" />{% endfor %}{% else %}
+    <link rel="apple-touch-icon-precomposed" href="{{ site.small-avatarurl }}">
+		{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/mainen.css">
+    <link rel="stylesheet" href="http://ze3kr.com/css/ad.css">
+		<link rel="stylesheet" href="http://ze3file.b0.upaiyun.com/css/font.css">
+		<style type="text/css">
+			.site-header {
+			  border-top: 5px solid {{ site.data.color.header.top }};
+				border-bottom: 1px solid {{ site.data.color.solid }};
+			}
+
+			.site-footer {
+			  border-top: 1px solid {{ site.data.color.solid }};
+			  background-color: {{ site.data.color.bottom.background }};
+				padding: 30px 0 0 0;
+			}
+
+			.posts .post-date { color: {{ site.data.color.post_date }}; }
+
+			.site-title,
+			.site-title:hover,
+			.site-title:visited { color: {{ site.data.color.title }}; }
+
+			.post-header h1,
+			.posts .post-link { color: {{ site.data.color.post_title }}; }
+
+		  .site-nav .menu-icon { color: {{ site.data.color.nav }}; }
+			.site-nav .page-link { color: {{ site.data.color.nav_link }}; }
+		</style>
+
+    {% if site.google_analytics %}<!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics.id }}', '{{ site.github.pages_hostname }}');
+      ga('send', 'pageview');
+    </script>{% endif %}
+		<meta http-equiv="content-language" content="en-us" />
+		<meta property="og:type" content="{% if page.notpost %}webpage{% else %}{% if page.categories.audio %}audio{% endif %}{% if page.categories.photo %}image{% endif %}{% if page.categories.video %}video{% endif %}{% if page.categories.post %}article{% endif %}{% endif %}" />
+		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+		<meta property="og:description" content="{{ page.subtitle }}" />
+		{% if page.image %}<meta property="og:image" content="{{ page.image }}" />{% endif %}
+		{% if page.vimeo-image %}<meta property="og:image" content="https://i.vimeocdn.com/video/{{ page.vimeo-image }}_1024.jpg" />{% endif %}
+		<meta property="og:site_name" content="{{ site.title }}" />
+		{% if page.file %}
+		{% endif %}
+</head>

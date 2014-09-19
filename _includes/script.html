@@ -1,0 +1,42 @@
+<!-- 
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plax.js"></script>
+ -->
+<script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '10lJIS']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c5146c23971c64"></script>
+<!-- 
+<script type="text/javascript">
+
+	var layers = $('.js-plaxify')
+
+	$.each(layers, function(index, layer){
+		$(layer).plaxify({
+			xRange: $(layer).data('xrange') || 0,
+			yRange: $(layer).data('yrange') || 0,
+			invert: $(layer).data('invert') || false
+		})
+	})
+	$(document).ready(function () {
+		$.plax.enable()
+	})
+	</script>
+	 -->
+	<script type="text/javascript">
+	//<![CDATA[
+	(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			}
+		}
+		document.write('<script charset="utf-8" type="text/javascript" src="http://ze3kr.disqus.com/get_num_replies.js' + query + '"></' + 'script>');
+	})();
+	//]]>
+	{% if page.notpost %}{% else %}
+		var disqus_url = '{{ page.url | replace:'index.html','' | prepend: site.github.url }}';
+		var disqus_identifier = '{{ page.url | replace:'index.html','' }}';
+	{% endif %}
+</script>
+{% if page.notpost %}{% else %}<script type="text/javascript" src="http://ze3kr.disqus.com/embed.js"></script>{% endif %}

@@ -1,0 +1,17 @@
+header: 
+  top: "#f05909"
+  background: "#f05909"
+
+bottom: 
+  background: "#fdfdfd"
+
+solid: "#e8e8e8"
+
+title: "#efff05"
+
+post_date: "#ff6d05"
+
+post_title: "#940305"
+
+nav: "#ae4a03"
+nav_link: "#000"

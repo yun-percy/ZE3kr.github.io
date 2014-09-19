@@ -1,0 +1,19 @@
+Sitemap: http://ze3kr.com/sitemap.xml
+Sitemap: http://ze3kr.com/zh/sitemap.xml
+Sitemap: http://ze3kr.com/en/sitemap.xml
+
+User-agent: *
+Disallow: /private
+Disallow: /version
+Disallow: /post
+Disallow: /test
+Disallow: /css/
+Disallow: /js/
+
+Disallow: /zh/
+
+Disallow: /en/
+
+Disallow: /video/more
+
+Crawl-delay: 1

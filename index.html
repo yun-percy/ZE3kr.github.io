@@ -1,0 +1,23 @@
+---
+layout: default
+notpost: yes
+isindex: yes
+---
+
+<div class="home">
+
+	{% if site.index_page.video %}
+		{% if site.vimeo.image %}
+		<iframe allowtransparency="true" src="http://v.ze3kr.com/frame/posts.html" width="100%" class="video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video" scrolling="no"></iframe>
+		{% endif %}
+	{% endif %}
+	<b><a href="http://v.ze3kr.com/" style="color: #f05909">More Video and Photo…</a></b>
+	<iframe allowtransparency="true" src="http://zh.ze3kr.com/frame/posts.html" width="100%" frameborder="0" seamless scrolling="no" width="100%" height="72"></iframe>
+	<b><a href="http://zh.ze3kr.com/" style="color: #f05909">更多中文文章…</a></b>
+	<iframe allowtransparency="true" src="http://en.ze3kr.com/frame/posts.html" width="100%" frameborder="0" seamless scrolling="no" width="100%" height="60"></iframe>
+	<b><a href="http://en.ze3kr.com/" style="color: #f05909">More in English blog…</a></b>
+	<hr />
+	{% include ad.html %}
+
+
+</div>
