@@ -46,6 +46,13 @@ img, iframe, video {
 	display: none!important;
 }
 
+.retro_static {
+	opacity: .07;
+	background: transparent url('http://ze3image.b0.upaiyun.com/thrideo/video_static_animated.gif') 0 0 repeat;
+	position: absolute;
+	z-index: 5;
+}
+
 .author p{
 	display: inline-block;
 }

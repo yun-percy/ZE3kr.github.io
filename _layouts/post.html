@@ -3,49 +3,66 @@ layout: default
 ---
 <div class="post">
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{% if page.date %}{{ page.date | date_to_string }} {{ page.date | date: "%H:%M" }} <span title="Greenwich Mean Time">GMT</span>{% endif %}{% if page.author %}{% if page.date %} • {% endif %}<span class="author">{{ post.author }}</span>{% endif %}{% if page.subtitle %} • {{ page.subtitle }}{% endif %}{% if page.nocomment %}{% else %} • <a href="{{ page.url | prepend: site.github.url }}#disqus_thread">Comment</a>{% endif %}</p>
-  </header>
+	<header class="post-header">
+		<h1>{{ page.title }}</h1>
+		<p class="meta">{% if page.date %}{{ page.date | date: "%b %d %Y" }} {{ page.date | date: "%H:%M" }} <span title="Greenwich Mean Time">GMT</span>{% endif %}{% if page.author %}{% if page.date %} • {% endif %}<span class="author">{{ page.author }}</span>{% endif %}{% if page.subtitle %} • {{ page.subtitle }}{% endif %}{% if page.nocomment %}{% else %} • <a href="{{ page.url | prepend: site.github.url }}#disqus_thread">Comment</a>{% endif %}</p>
+	</header>
 
-  <article class="post-content">
-	{% if page.image %}<a href="{{ page.full-image }}" title="Original res version"><img src="{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','_c.' }}" srcset="
-				{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' }} 2x, 
-				{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','_n.' }} 320w 1x, 
-				{{ post.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','_z.' }} 640w 1x, 
-				{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','_c.' }} 320w 2x, 
-				{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','' }} 500w 1x, 
-				{{ page.image | replace:'https://','http://' | replace:'staticflickr.com','static.ze3kr.com' | replace:'_b.','' }} 250w 2x,  
-				" style="min-height: 100px;" /></a>{% endif %}
-	{% if page.vimeo %}
-		<iframe src="https://player.vimeo.com/video/{{ page.vimeo }}?title=0&amp;byline=0&amp;portrait=0&amp;color=f05909&amp;autoplay=1" width="100%" class="video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video"></iframe>
-	{% else %}
-  {% if page.file %}<video controls width="100%" autoplay name="media" style="max-width: 100%; max-height: 100%;" id="video" class="video" x-webkit-airplay="allow" bgcolor="white" poster="{% if page.type %}{{ page.image }}{% else %}{{ site.avatarurl }}{% endif %}"><source src="{{ page.file }}" type="{% if page.type %}{{ page.type }}{% else %}{{ site.defaultFileType }}{% endif %}"></video>{% endif %}
-	{% endif %}
-	<a class="addthis_button_facebook_like" fb:like:layout="button_count" style="display: inline-block;height: 20px;"></a><div class="addthis_sharing_toolbox"></div>
-	{% if page.file %}{% if site.itunes %}
-	<a href="{{ site.itunes }}" target="_blank">
-		<img src="/image/subscribe.png" style="width: 110px; height: 40px; float:right;">
-	</a>
-	{% endif %}{% endif %}
-	{{ content }}
-	{% if page.feat %}{{ page.feat | cdata_escape | markdownify }}{% endif %}
-	{% if page.vimeo %}<p>Also you can watch it on <a href="https://vimeo.com/{{ page.vimeo }}">Vimeo</a>{% if page.youtube %} | <a href="https://www.youtube.com/watch?v={{ page.youtube }}">YouTube</a>{% endif %}{% if page.youku %} | <a href="http://v.youku.com/v_show/id_{{ page.youku }}.html">优酷</a>{% endif %}</p>{% endif %}
-	{% if page.flickr %}<p>See the EXIF and more on <a href="{{ page.flickr }}">Flickr</a></p>{% endif %}
-	{% if page.sound %}<p><a href="{{ page.sound | replace:'https://','http://' }}">Download Soundtrack</a></p>{% endif %}
-	{% if page.file %}<p><a href="http://vt.tumblr.com/tumblr_{{ page.file }}">Download file</a></p>{% endif %}
-	<hr />
-	{% include ad.html %}
+	<article class="post-content">
+		{% if page.photo-file %}
+		<a href="{{ site.photo-server-domain }}{{ page.photo-file }}" target="_blank" title="Original res version">
+			<img src="{{ site.photo-server-domain }}{{ page.photo-file }}_500px" srcset="
+				{{ site.photo-server-domain }}{{ page.photo-file }}_320px 320w, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_450px 450w, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_500px 250w 2x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_500px 500w, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_600px 600w, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_640px 320w 2x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_750px 375w 2x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_800px 400w 2x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_800px 800w, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_900px 450w 2x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_1200px 600w 2x,
+				{{ site.photo-server-domain }}{{ page.photo-file }}_1200px 1.5x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_1200px 414w 3x, 
+				{{ site.photo-server-domain }}{{ page.photo-file }}_2x 2x,
+			" class="img-photo" alt="{{ page.title }}" />
+		</a>{% endif %}
+		{% if page.vimeo %}<div id="chajs-automatic-video" class="div-video"></div>{% endif %}
+		<div class="addthis_sharing_toolbox"><a class="addthis_button_facebook_like" fb:like:layout="button_count" style="display: inline-block;height: 20px;z-index: 6;"></a></div>
+		{% if page.file %}{% if site.itunes %}
+		<a href="{{ site.itunes }}" target="_blank">
+			<img src="/image/subscribe.png" style="width: 110px; height: 40px; float:right;">
+		</a>
+		{% endif %}{% endif %}
+		{{ content }}
+		{% if page.feat %}{{ page.feat | cdata_escape | markdownify }}{% endif %}
+		{% if page.vimeo %}<p>Also you can watch it on <a target="_blank" href="https://vimeo.com/{{ page.vimeo }}">Vimeo</a>{% if page.youtube %} | <a target="_blank" href="https://www.youtube.com/watch?v={{ page.youtube }}">YouTube</a>{% endif %}{% if page.youku %} | <a target="_blank" href="http://v.youku.com/v_show/id_{{ page.youku }}.html">优酷</a>{% endif %}</p>{% endif %}
+		{% if page.flickr %}<p>See the EXIF and more on <a target="_blank" href="{{ page.flickr }}">Flickr</a></p>{% endif %}
+		{% if page.sound %}<p><a target="_blank" href="{{ page.sound | replace:'https://','http://' }}">Download Soundtrack</a></p>{% endif %}
+		{% if page.file %}<p>{% if page.file.sd %}<a target="_blank" href="{{ site.video-server-domain }}{{ page.file.sd }}?_upd={{ page.title | cgi_escape }}">Download file (SD)</a>{% endif %}{% if page.file.1080p %} | <a target="_blank" href="{{ site.video-server-domain }}{{ page.file.1080p }}?_upd={{ page.title | cgi_escape }}">Download file (1080p)</a>{% endif %}</p>{% endif %}
+		{% if page.photo-file %}<p><a target="_blank" href="{{ site.photo-server-domain }}{{ page.photo-file }}?_upd={{ page.title | cgi_escape }}">Download file</a></p>{% endif %}
+		<hr />
+		<h2 class="footer-heading">Related posts</h2>
+		<ul>
+			{% for post in site.related_posts limit:3 %}
+			<li>
+				<a class="post-date" href="{{ post.url | prepend: site.github.url }}" title="">
+					<b class="gray">{{ post.date | date: "%d %b" }}</b>
+					<span>{{ post.title }}</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+		{% include ad.html %}
 		<footer class="post-footer site-footer" id="footer">
-			{% if page.tag %}
-			<p>Tags: 
-				{% for tag in page.tag %}
-				<a href="{{ "/tagged" | prepend: site.github.url }}/#{{ tag | cgi_escape }}">#{{ tag }}</a>&nbsp;
-				{% endfor %}
+			{% if page.tags %}
+			<p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="18" viewBox="0 0 544 512" fill="#828282" style="top: 3px;position: relative;"><path d="M 496.00,32.00L 384.00,32.00 c-26.40,0.00-63.273,15.273-81.941,33.941L 113.941,254.059c-18.667,18.667-18.667,49.214,0.00,67.882l 140.118,140.117 c 18.667,18.668, 49.214,18.668, 67.882,0.00l 188.117-188.117C 528.727,255.273, 544.00,218.40, 544.00,192.00L 544.00,80.00 C 544.00,53.60, 522.40,32.00, 496.00,32.00z M 432.00,192.00 c-26.51,0.00-48.00-21.49-48.00-48.00s 21.49-48.00, 48.00-48.00s 48.00,21.49, 48.00,48.00S 458.51,192.00, 432.00,192.00zM 43.313,299.313 L 214.502,470.502 C 196.37,480.082 173.271,477.271 158.059,462.058 L 17.941,321.941 C -0.726,303.273 -0.726,272.726 17.941,254.059 L 206.059,65.941 C 224.727,47.273 261.60,32.00 288.00,32.00 L 43.313,276.686 C 37.091,282.909 37.091,293.09 43.313,299.313 Z"></path></svg>Tags: 
+				{% for tag in page.tags %}#{{ tag }}&nbsp;{% endfor %}
 			</p>
 			{% endif %}
 			{% if page.nocomment %}{% else %}<div id="disqus_thread"></div>{% endif %}
 		</footer>
-  </article>
+	</article>
 
 </div>
