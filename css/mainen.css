@@ -259,10 +259,6 @@ iframe[src^="http://sports.yahoo"],
 	overflow: hidden;
 }
 
-.post-content {
-    overflow: hidden;
-}
-
 .tumblr_audio_player {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
