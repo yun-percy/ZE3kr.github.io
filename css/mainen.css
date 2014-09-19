@@ -585,6 +585,10 @@ b,
 		left: -12px;
 	}
 
+	.retro_static {
+		left: 0!important;
+	}
+
 	.img-div {
 		min-height: auto!important;
 	}
