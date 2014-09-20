@@ -18,6 +18,8 @@ copyright: CC BY-NC-SA 3.0.
 copyright_link: http://creativecommons.org/licenses/by-nc-sa/3.0/
 itunes: https://itunes.apple.com/podcast/id907999392?at=10lJIS
 
+file-server-domain: "http://ze3file.b0.upaiyun.com/" #也可以是http://file.ze3kr.static.iego.net/
+
 google_analytics: 
   enable: yes
   id: "UA-47292820-1"
@@ -26,7 +28,7 @@ index_page:
   photo: no
   video: yes
 
-email: "ze3kr@icloud.com"
+email: "admin@ze3kr.com"
 twitter_username: "ZE3kr"
 # 建站设置
 markdown: kramdown
@@ -53,25 +55,3 @@ disqus:
 addthis: 
   enable: yes
   addthis_pubid: "ra-53c5146c23971c64"
-
-facebook: 
-  enable: yes
-  layout: button_count
-  show_faces: yes
-  share: yes
-
-twitter:
-  enable: no
-  appkey: ""
-
-sinaweibo: 
-  enable: yes
-  ralateUid: "3026292980"
-  appkey: "1963081010"
-
-qzone:
-  enable: yes
-  showcount: "0" #不同于之前的，“showcount”填1代表“是”，填2代表“否”。
-
-auto_hide: no
-#根据地区自动隐藏（例如中国地区访问会隐藏Twitter和Facebook。
