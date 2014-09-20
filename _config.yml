@@ -18,7 +18,7 @@ copyright: CC BY-NC-SA 3.0.
 copyright_link: http://creativecommons.org/licenses/by-nc-sa/3.0/
 itunes: https://itunes.apple.com/podcast/id907999392?at=10lJIS
 
-file-server-domain: "http://ze3file.b0.upaiyun.com/" #也可以是http://file.ze3kr.static.iego.net/
+file-server-domain: "http://file.ze3kr.static.iego.net/" #也可以是http://ze3file.b0.upaiyun.com/
 
 google_analytics: 
   enable: yes
