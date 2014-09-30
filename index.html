@@ -7,13 +7,13 @@ isindex: yes
 <div class="home">
 
 	<h1>Welcome to My Site!</h1>
-	<h2>Featured <a href="http://v.ze3kr.com/" style="color: #f05909">Video and Photo</a></h2>
+	<h2>Featured <a href="http://v.ze3kr.com/" style="color: #f05909" target="_black">Video and Photo</a></h2>
 	{% if site.index_page.video %}
 		{% if site.vimeo.image %}
 		<iframe allowtransparency="true" src="http://v.ze3kr.com/frame/posts.html" width="100%" class="video img-photo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video" scrolling="no"></iframe>
 		{% endif %}
 	{% endif %}
-	<h2><a href="http://t.ze3kr.com/" style="color: #f05909">My Timeline…</a></h2>
+	<h2><a href="http://t.ze3kr.com/" style="color: #f05909" target="_black">My Timeline…</a></h2>
 	<hr />
 	{% include ad.html %}
 
