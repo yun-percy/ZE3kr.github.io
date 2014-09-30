@@ -10,12 +10,12 @@ title: "ZE3kr"
 language: en-us
 defaultFileType: "video/mp4"
 description: "ZE3kr’s video, photography, technology course, hot news discuss is on this website! Don't miss the newest post."
-small-avatarurl: "http://i.vimeocdn.com/portrait/8171816_128x128.jpg"
-avatarurl: "http://i.vimeocdn.com/portrait/8171816.jpg"
+small-avatarurl: "https://technolumn.b0.upaiyun.com/thrideo/ze3kr_s.jpg"
+avatarurl: "https://technolumn.b0.upaiyun.com/thrideo/ze3kr.jpg"
 explicit: "no"
 branch: master
 copyright: CC BY-NC-SA 3.0.
-copyright_link: http://creativecommons.org/licenses/by-nc-sa/3.0/
+copyright_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
 itunes: https://itunes.apple.com/podcast/id907999392?at=10lJIS
 
 file-server-domain: "//ze3kr.com/" #也可以是http://ze3file.b0.upaiyun.com/
