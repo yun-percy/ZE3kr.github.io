@@ -100,10 +100,8 @@ img, iframe, video {
 .background-img {
 	height: 112px;
 	max-width: none;
-	min-width: 110%;
 	position: absolute;
-	width: 1522px; 
-	position: absolute;
+	width: 516px; 
 	top: -42px;
 	right: -60px; 
 	left: initial!important;
