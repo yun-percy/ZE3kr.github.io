@@ -544,7 +544,11 @@ b,
 	}
 
 	.left-image {
-		display: none;
+		display: none!important;
+	}
+
+	.post-right {
+		margin-left: 0px!important;
 	}
 
 	.img-photo {
