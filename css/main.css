@@ -605,6 +605,10 @@ b,
     line-height: 36px;
   }
 
+	.site-nav .page-link {
+		color: #000!important;
+	}
+
 	.site-nav .menu-hide { display: block; }
 
   .site-nav .menu-icon svg { width: 18px; height: 16px; }
