@@ -591,6 +591,7 @@ b,
 	}
 
 }
+
 @media screen and (max-device-width: 600px) {
   .site-nav {
     position: fixed;
@@ -640,7 +641,17 @@ b,
 		text-shadow: none;
   }
 }
+
+@media screen and (max-width: 427px) {
+	.index-photo {
+		width: 100%;
+		max-width: 300px;
+		height: auto;
+	}
+}
+
 @media screen and (max-width: 450px) {
+
   .video,
 	.video-post a,
 	.tumblr_video_container,
@@ -651,6 +662,7 @@ b,
 	}
 
 }
+
 @media screen and (max-width: 320px) {
 	.video,
 	.video-post a,
