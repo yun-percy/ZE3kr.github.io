@@ -1,8 +1,8 @@
 <header class="site-header">
-	<div class="background-div"><img src="http://ze3kr.com/image/top-plax_1x.png" srcset="http://ze3kr.com/image/top-plax_2x.png 2x, http://ze3kr.com/image/top-plax_3x.png 3x," class="js-plaxify background-img" data-invert="true" data-xrange="0" data-yrange="20" /></div>
+	<div class="background-div"><img src="//ze3kr.com/image/top-plax_1x.png" srcset="//ze3kr.com/image/top-plax_2x.png 2x, //ze3kr.com/image/top-plax_3x.png 3x," class="js-plaxify background-img" data-invert="true" data-xrange="0" data-yrange="20" /></div>
   <div class="wrap">
 
-    <a class="site-title" href="{{ site.github.url }}{% if page.nositename %}{{ page.url }}{% else %}/{% endif %}{% if page.file %}video/{% endif %}{% if page.full-image %}photo/{% endif %}" rel="home">{% if page.nositename %}{{ page.title }}{% endif %}{% if page.file %}Thrideo{% else %}{% if page.full-image %}ZE3kr’s Photo{% else %}{% if page.nositename %}{% else %}{{ site.title }}{% endif %}{% endif %}{% endif %}</a>
+    <a class="site-title" href="{{ site.github.url | replace:'http://','//' }}{% if page.nositename %}{{ page.url }}{% else %}/{% endif %}{% if page.file %}video/{% endif %}{% if page.full-image %}photo/{% endif %}" rel="home">{% if page.nositename %}{{ page.title }}{% endif %}{% if page.file %}Thrideo{% else %}{% if page.full-image %}ZE3kr’s Photo{% else %}{% if page.nositename %}{% else %}{{ site.title }}{% endif %}{% endif %}{% endif %}</a>
 
     <nav class="site-nav">
       <a id="menu-icon" href="javascript:void(0);" class="menu-icon" onclick="document.getElementById('trigger').style.display='block';document.getElementById('menu-icon').style.display='none';document.getElementById('trigger-icon').style.display='block';">
@@ -26,7 +26,7 @@
       </a>
       <div class="trigger" id="trigger">
 				<a class="page-link" href="/">Home</a>
-				<a class="page-link" href="/archive{% if page.nositename %}{{ page.url }}{% else %}/{% endif %}{% if page.file %}video/{% endif %}{% if page.full-image %}photo/{% endif %}">Archive</a>
+				<a class="page-link" href="/archive/">Archive</a>
       </div>
     </nav>
 
