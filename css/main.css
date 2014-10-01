@@ -56,7 +56,7 @@ img, iframe, video {
 	width: -o-calc(100% - 60px);
 	width: calc(100% - 60px);
 	max-width: 800px;
-	background: transparent url('http://ze3image.b0.upaiyun.com/thrideo/video_static_animated.gif') 0 0 repeat;
+	background: transparent url('//technolumn.b0.upaiyun.com/thrideo/video_static_animated.gif') 0 0 repeat;
 	position: absolute;
 	z-index: 5;
 }
