@@ -77,6 +77,8 @@ img, iframe, video {
   zoom: 1;
 }
 
+.warp-photo { max-width: 810px!important; }
+
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
