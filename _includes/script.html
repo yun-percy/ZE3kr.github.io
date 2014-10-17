@@ -7,24 +7,4 @@
     var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
   }(document, 'script'));
 </script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c5146c23971c64"></script>
-
-<script type="text/javascript">
-	//<![CDATA[
-	(function() {
-		var links = document.getElementsByTagName('a');
-		var query = '?';
-		for(var i = 0; i < links.length; i++) {
-			if(links[i].href.indexOf('#disqus_thread') >= 0) {
-				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-			}
-		}
-		document.write('<script charset="utf-8" type="text/javascript" src="//ze3kr.disqus.com/get_num_replies.js' + query + '"></' + 'script>');
-	})();
-	//]]>
-	{% if page.notpost %}{% else %}
-		var disqus_url = '{{ page.url | replace:'index.html','' | prepend: site.github.url }}';
-		var disqus_identifier = '{{ page.url | replace:'index.html','' }}';
-	{% endif %}
-</script>
-{% if page.notpost %}{% else %}<script type="text/javascript" src="//ze3kr.disqus.com/embed.js"></script>{% endif %}
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53c5146c23971c64" async="async"></script>
