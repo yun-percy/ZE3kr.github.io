@@ -1,0 +1,20 @@
+---
+layout: default
+notpost: yes
+isindex: yes
+aftertitle: "(郭泽宇)"
+permalink: /index.html.zh
+---
+
+<div class="home">
+
+	<h1>欢迎来到我的网站!</h1>
+	<h2>推荐<a href="//v.ze3kr.com/" style="color: #f05909">视频和图片</a></h2>
+	{% if site.index_page.video %}
+		<a href="//v.ze3kr.com/{{ site.vimeo.url }}#video"><div class="retro_static video"></div></a>
+		<iframe allowtransparency="true" src="//v.ze3kr.com/frame/posts.html" width="100%" class="video img-photo" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen id="video" scrolling="no" sandbox></iframe>
+	{% endif %}
+	<h2><a href="http://t.ze3kr.com/" style="color: #f05909">我的时间线…</a></h2>
+	{% include ad.html %}
+
+</div>
