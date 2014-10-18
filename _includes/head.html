@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}{% if page.title %}{% if page.nositename %}{% else %} | {% endif %}{% endif %}{% if page.file %}Thrideo{% else %}{% if page.full-image %}ZE3kr’s Photo{% else %}{% if page.nositename %}{% else %}{{ site.title }}{% endif %}{% endif %}{% endif %}</title>
+    <title>{{ page.title }}{% if page.title %}{% if page.nositename %}{% else %} | {% endif %}{% endif %}{% if page.file %}Thrideo{% else %}{% if page.full-image %}ZE3kr’s Photo{% else %}{% if page.nositename %}{% else %}{{ site.title }}{% endif %}{% endif %}{% endif %}{% if page.aftertitle %} {{ page.aftertitle }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     {% if page.subtitle %}<meta name="description" content="{{ page.subtitle }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 	{% include dns-prefetch.html %}
