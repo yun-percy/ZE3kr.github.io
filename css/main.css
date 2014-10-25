@@ -671,3 +671,12 @@ b,
 	.tumblr_video_container,
 	.tumblr_video_iframe { height: 180px!important; }
 }
+
+code,
+tt,
+kbd,
+samp,
+pre,
+xmp,
+plaintext,
+listing { font-family: bree-serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif; }
