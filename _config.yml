@@ -20,6 +20,7 @@ copyright_link: https://creativecommons.org/licenses/by-nc-sa/3.0/
 itunes: https://itunes.apple.com/podcast/id907999392?at=10lJIS
 
 file-server-domain: "//ze3kr.com/" #也可以是http://ze3file.b0.upaiyun.com/
+photo-server-domain: "http://tlimage.b0.upaiyun.com//"
 
 google_analytics: 
   enable: yes

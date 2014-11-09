@@ -17,7 +17,7 @@ permalink: /index.zh.html
 	<h2><a href="http://t.ze3kr.com/" style="color: #f05909">我的时间线…</a></h2>
 	{% for post in site.posts limit:10 %}
 	<li>
-		<a class="post-date" href="{{ post.url | prepend: site.github.url }}" title=""><b class="gray">{{ post.date | date: "%d %b" }}</b>
+		<a class="post-date" href="{{ post.url }}" title=""><b class="gray">{{ post.date | date: "%d %b" }}</b>
 			<span>{{ post.title }}</span>
 		</a>
 	</li>
