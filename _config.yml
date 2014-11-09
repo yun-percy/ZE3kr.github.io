@@ -34,7 +34,7 @@ email: "admin@ze3kr.com"
 twitter_username: "ZE3kr"
 # 建站设置
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:month/:title.html
 
 # 屏蔽设置
 blockitunes: "no"
